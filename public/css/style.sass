@@ -1,0 +1,119 @@
+$vibur: 'Vibur', cursive
+$lato-font: 'Lato', sans-serif
+$main-color: #5CD1C7
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body
+  font-size: 20px
+  font-size: 20px
+  font-weight: 300
+  text-rendering: optimizeLegibility
+  font-family: $lato-font !important
+
+
+
+/* ------------------------ * /
+/* HERO SECTION
+/* ------------------------ * /
+#hero-section
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0, 0.2)), url('../images/hero.jpg')
+  height: 100vh
+  background-size: cover
+  background-position: center
+
+.hero-text-box
+  h1
+    font-size: 350%
+    font-family: $vibur
+    text-shadow: 1px 1px #4d4d4d
+    color: #ffffff
+  p
+    color: #ffffff
+    font-weight: 400
+    font-family: $lato-font
+    word-spacing: 2px
+/* ------------------------ * /
+/* NAVBAR
+/* ------------------------ * /
+.top-login-btn
+  padding: 15px 25px !important
+  background-color: #B23000
+  color: #ffffff !important
+  cursor: pointer
+  word-spacing: 3px
+  border-radius: 5px
+  transition: all 0.4s ease
+  &:hover
+    color: #ffffff
+    background-color: #B23000 !important
+
+.navbar-default
+  padding: 10px 0
+/* ------------------------ * /
+/* SIGN UP CONTAINER
+/* ------------------------ * /
+.panel-heading
+  background-color: #5CD1C7
+  text-align: center
+  color: #ffffff
+  margin-bottom: 20px
+  h3
+    font-weight: 300
+.signup-btn
+  display: block
+  text-decoration: none !important
+  text-align: center
+  background: $main-color
+  padding: 6px
+  color: #ffffff
+  font-weight: 400
+  transition: all 0.3s ease
+  cursor: pointer
+  &:hover
+    background-color: #54b7af
+    color: #ffffff
+.login-btn
+  margin-bottom: 20px
+.form-control
+  margin-bottom: 30px
+  height: 40px
+
+.facebook-btn,
+.google-btn
+  text-align: center
+  display: block
+  widows: 100%
+  padding: 10px
+  transition: all 0.3s ease
+  font-size: 85%
+  &:hover
+    color: #ffffff
+    text-decoration: none
+  i
+    padding-right: 5px
+    margin-right: 6px
+
+.facebook-btn
+  background-color: #3d5b99
+  color: #ffffff
+  width: 100%
+  margin-bottom: 10px
+  &:hover
+    background-color: #486bb3
+  i
+    border-right: 1px solid #5a7db2
+    margin-right: 10%
+    padding-right: 11%
+.google-btn
+  background-color: #db4437
+  color: #ffffff
+  &:hover
+    background-color: #bb3f35
+  i
+    border-right: 1px solid #db634f
+    margin-right: 17%
+    padding-right: 8%
