@@ -40,9 +40,6 @@ $('.dropdown-btn').hover(() => {
     'background-image': '-moz-linear-gradient(top, #39ca74, #62879e)',
     'background-image': '-o-linear-gradient(top, #39ca74, #62879e)',
     'background-image': 'linear-gradient(to bottom, #39ca74, #62879e)',
-    // '-webkit-border-radius': '28',
-    // '-moz-border-radius': '28',
-    // 'border-radius': '28px',
     'color': '#ffffff',
     'padding': '10px',
     'text-decoration': 'none'
@@ -57,9 +54,6 @@ $('.dropdown-btn').hover(() => {
     'background-image': '-moz-linear-gradient(top, #e54e42, #692c2c)',
     'background-image': '-o-linear-gradient(top, #e54e42, #692c2c)',
     'background-image': 'linear-gradient(to bottom, #e54e42, #692c2c)',
-    // '-webkit-border-radius': '28',
-    // '-moz-border-radius': '28',
-    // 'border-radius': '28px',
     'color': '#ffffff',
     'padding': '10px',
     'text-decoration': 'none'
@@ -73,9 +67,6 @@ $('.dropdown-btn').hover(() => {
     'background-image': '-moz-linear-gradient(top, #1b95e0, #2b5870',
     'background-image': '-o-linear-gradient(top, #1b95e0, #2b5870',
     'background-image': 'linear-gradient(to bottom, #1b95e0, #2b5870',
-    // '-webkit-border-radius': '28',
-    // '-moz-border-radius': '28',
-    // 'border-radius': '28px',
     'color': '#ffffff',
     'padding': '10px',
     'text-decoration': 'none'

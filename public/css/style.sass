@@ -364,9 +364,7 @@ body
   box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.15)
 .family-color
   background-color: #39ca74
-  background-image: -webkit-linear-gradient(top, #39ca74, #62879e)
   background-image: -moz-linear-gradient(top, #39ca74, #62879e)
-  background-image: -ms-linear-gradient(top, #39ca74, #62879e)
   background-image: -o-linear-gradient(top, #39ca74, #62879e)
   background-image: linear-gradient(to bottom, #39ca74, #62879e)
   -webkit-border-radius: 28
@@ -380,7 +378,6 @@ body
 
 
 .friend-color
-  background-color: $main-color
   background-color: $main-color
   background-image: -webkit-linear-gradient(top, $main-color, #62879e)
   background-image: -moz-linear-gradient(top, $main-color, #62879e)
@@ -397,11 +394,9 @@ body
   text-decoration: none
 .coworker-color
   background-color: #e96a60
-  background-image: -webkit-linear-gradient(top, #e96a60, #62879e)
-  background-image: -moz-linear-gradient(top, #e96a60, #62879e)
-  background-image: -ms-linear-gradient(top, #e96a60, #62879e)
-  background-image: -o-linear-gradient(top, #e96a60, #62879e)
-  background-image: linear-gradient(to bottom, #e96a60, #62879e)
+  background-image: -moz-linear-gradient(top, #e54e42, #692c2c)
+  background-image: -o-linear-gradient(top, #e54e42, #692c2c)
+  background-image: linear-gradient(to bottom, #e54e42, #692c2c)
   -webkit-border-radius: 28
   -moz-border-radius: 28
   border-radius: 28px
@@ -428,6 +423,7 @@ body
   box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.33)
   form
     display: inline-block
+
 .birthday-col
   overflow: scroll !important
 .logout-btn
@@ -500,7 +496,7 @@ body
   z-index: 1
   position: absolute
   padding: 12px
-  border-radius: 5px
+
   li
     list-style: none
   a
@@ -509,13 +505,30 @@ body
     display: block
     padding: 13px 45px
     text-decoration: none
-    background-color: #9a5cb4
+    margin-bottom: 5px
     margin-top: 0 !important
     transition: all 0.3s ease
+    background: #894ba3
+    background-image: -webkit-linear-gradient(top, #894ba3, #4b2d57)
+    background-image: -moz-linear-gradient(top, #894ba3, #4b2d57)
+    background-image: -ms-linear-gradient(top, #894ba3, #4b2d57)
+    background-image: -o-linear-gradient(top, #894ba3, #4b2d57)
+    background-image: linear-gradient(to bottom, #894ba3, #4b2d57)
+    -webkit-border-radius: 28
+    -moz-border-radius: 28
+    border-radius: 28px
+    color: #ffffff
+    font-size: 21px
+    padding: 10px 20px 10px 20px
+    text-decoration: none
     &:hover
+      background: #894ba3
+      background-image: -webkit-linear-gradient(top, #894ba3, #894ba3)
+      background-image: -moz-linear-gradient(top, #894ba3, #894ba3)
+      background-image: -ms-linear-gradient(top, #894ba3, #894ba3)
+      background-image: -o-linear-gradient(top, #894ba3, #894ba3)
+      background-image: linear-gradient(to bottom, #894ba3, #894ba3)
       text-decoration: none
-      color: #fff
-      background-color: $main-color
 
 .current-user
   text-transform: capitalize
@@ -529,21 +542,21 @@ body
   font-size: 120%
   position: absolute
   z-index: -1 !important
-  top: 2px
-  left: 76%
+  top: 1px
+  left: 71%
   width: 0
   height: 0
   border-left: 20px solid transparent
   border-right: 20px solid transparent
-  border-bottom: 20px solid #9a5cb4
+  border-bottom: 20px solid #894ba3
 
 /* ------------------------ * /
 /* ADD NEW BIRTHDAY FORM
 /* ------------------------ * /
-.new-birthday-from-container
+.new-birthday-form-container
   height: 100%
   width: 100%
-  background-color: red
+  background: linear-gradient(rgba(0.33, 0, 0, 0.4), rgba(0.33, 0, 0, 0.4)), url('../images/form-background6.jpg')
   background-position: center center
   background-size: cover
 
@@ -573,8 +586,6 @@ body
     font-weight: 600 !important
     text-align: center
 
-
-
 .year-input
   background-color: #39ca74 !important
   color: #fff !important
@@ -588,8 +599,6 @@ body
 .day-input
   float: left
   background-color: #f0c231 !important
-
-
 
 select
   color: #fff
@@ -646,6 +655,11 @@ select
   i
     font-size: 120%
     color: #fff
+    transition: all 0.4s ease-in-out
+    &:hover
+      padding: 5px 10px
+      border-radius: 50%
+      border: 1px solid #fff
 .delete-btn
   position: relative
   border: none
@@ -656,7 +670,9 @@ select
     color: #fff
     transition: all 0.3s ease
     &:hover
-      color: #e54e42
+      padding: 5px 10px
+      border-radius: 50%
+      border: 1px solid #fff
 .current-user
   color: #4c4c4c
 .profile-picture
