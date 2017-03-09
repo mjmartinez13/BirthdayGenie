@@ -1,0 +1,64 @@
+<div class="body-background">
+  <div class="container">
+    <div class="login-wrapper">
+
+
+
+
+
+      <div class="col-sm-7">
+        <h1>Welcome back!</h1>
+        <h2>Now lets check your current list for future birthdays</h2>
+
+      </div>
+
+      <div class="col-sm-5" style="padding: 0">
+
+        <div class="panel">
+
+
+          <form id="login-form" action="/login" method="post">
+            <div class="panel-heading">
+              <div class="row">
+
+                <img src="images/logo.png">
+                <hr style="width: 20%; margin-left: 40%; border: 1px solid #456480">
+
+                <% if (typeof errorMessage !== "undefined") { %>
+                  <p class="error-message"> <%= errorMessage %> </p>
+                <% } %>
+
+
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username">User Name</label>
+              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox">
+                <label for="checkboxes-0">
+                  <input name="checkboxes" id="checkboxes-0" value="1" type="checkbox">
+                  Remember my password
+                </label>
+              </div>
+            </div>
+
+            <button class="signup-btn login-btn">Log In</button>
+            <hr style="border: 1px solid #bfcbd5;">
+            <a class="facebook-btn"href="/auth/facebook"><i class="ion-social-facebook"></i>Facebook</a>
+
+            <a class="google-btn"href="/auth/google"><i class="ion-social-googleplus"></i>Google</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="body-background">
+  <div class="login-wrapper signup-wrapper">
+    <div class="col-sm-6">
+      <h1>Join! and forget no more!</h1>
+      <p>Get notify every time and don't miss a birthday from any of your significant others</p>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-signup">
+        <div class="panel-heading">
+            <img src="images/logo.png">
+        </div>
+
+        <form id="signup-form" action="/signup" method="post" role="form">
+
+          <% if (typeof errorMessage !== "undefined") { %>
+            <p class="error-message"> <i class="ion-alert-circled"></i><%= errorMessage %> </p>
+          <% } %>
+
+          <div style="padding-left: 0" class="col-sm-6">
+            <div class="form-group">
+              <input type="text" name="firstName" id="name" tabindex="1" class="form-control" placeholder="Name">
+            </div>
+          </div>
+          <div style="padding-right: 0" class="col-sm-6">
+            <div class="form-group">
+              <input type="text" name="lastName" id="lastName" tabindex="1" class="form-control" placeholder="Last Name" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+          </div>
+          <div class="form-group">
+            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="User Name" value="">
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="checkboxes-0">
+                <input name="checkboxes" id="checkboxes-0" value="1" type="checkbox">
+                I agree with terms and conditions.
+              </label>
+            </div>
+          </div>
+          <button class="signup-btn">Sign Up</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

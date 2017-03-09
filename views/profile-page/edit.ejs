@@ -1,0 +1,85 @@
+<div class="form-container">
+
+  <div class="panel panel-signup">
+    <div class="panel-heading">
+        <img src="/images/logo.png">
+    </div>
+
+    <form id="signup-form" action="/profile/<%= birthday._id %>" method="post" role="form">
+
+      <% if (typeof errorMessage !== "undefined") { %>
+        <p class="error-message"> <i class="ion-alert-circled"></i><%= errorMessage %> </p>
+      <% } %>
+
+      <div style="padding-left: 0" class="col-sm-6">
+        <div class="form-group">
+          <input type="text" name="firstName" id="name" tabindex="1" class="form-control" value="<%= birthday.firstName %>">
+        </div>
+      </div>
+
+      <div style="padding-right: 0" class="col-sm-6">
+        <div class="form-group">
+          <input type="text" name="lastName" id="lastName" tabindex="1" class="form-control" placeholder="Last Name" value="<%= birthday.lastName %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <h3>Relationship</h3>
+        <hr style="border: 3px solid #e54e42; border-radius: 25px;width: 10%; display: inline-block">
+        <hr style="border: 3px solid #f0c231; border-radius: 25px;width: 10%; display: inline-block">
+        <hr style="border: 3px solid #1b95e0; border-radius: 25px;width: 10%; display: inline-block">
+        <hr style="border: 3px solid #39ca74; border-radius: 25px;width: 10%; display: inline-block">
+        <div class="checkbox">
+          <label for="checkboxes-0">
+            <input name="family" id="checkboxes-0" value="<%= birthday.family %>" type="checkbox">
+            Family
+          </label>
+          <label for="checkboxes-0">
+            <input name="friend" class="friend" id="checkboxes-0" value="<%= birthday.friend %>" type="checkbox">
+            Friends
+          </label>
+          <label for="checkboxes-0">
+            <input name="coworker"  id="checkboxes-0" value="<%= birthday.coworker %>" type="checkbox">
+            Coworker | 'Friends'
+          </label>
+        </div>
+      </div>
+
+      <hr>
+      <h3>D.O.B</h3>
+
+    <div class="form-group">
+
+      <select  class="month-input" name="month">
+        <option value="<%= birthday.month %>"> <%= birthday.month %> </option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+    </div>
+    <div class="form-group">
+
+      <input class="day-input" type="number" name="day" id="day" tabindex="1" class="form-control" placeholder="Day" value="<%= birthday.day %>">
+    </div>
+
+    <div class="form-group">
+      <input  class="year-input" type="number" name="year" id="year" tabindex="1" class="form-control" placeholder="Year" value="<%= birthday.year %>">
+
+    </div>
+
+    <hr>
+    <button class="signup-btn profile-btn">Submit</button>
+  </form>
+
+</div>
+</div>
+
+</div>

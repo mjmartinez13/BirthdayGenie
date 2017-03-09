@@ -1,92 +1,272 @@
-$vibur: 'Vibur', cursive
-$lato-font: 'Lato', sans-serif
-$main-color: #5CD1C7
+$pacifico: 'Pacifico', cursive
+$font-family: 'Raleway', sans-serif
+$main-color: #1b95e0
+$patrick: 'Patrick Hand', cursive
 
+// gray #bfcbd5
 *
   padding: 0
   margin: 0
-  box-sizing: border-box
+  box-sizing: border-box !important
 
 body
-  font-size: 20px
-  font-size: 20px
+  text-rendering: optimizeLegibility
+  color: #1f3239
+  font-family: $font-family
   font-weight: 300
   text-rendering: optimizeLegibility
-  font-family: $lato-font !important
+  font-size: 20px
 
+.blur
+  -webkit-filter: blur(3px)
+  -moz-filter: blur(3px)
+  -o-filter: blur(3px)
+  -ms-filter: blur(3px)
+  filter: blur(3px)
+/* ------------------------ * /
+/* FLYING TEXT
+/* ------------------------ * /
+/* ------------------------ * /
+/* errorMessage
+/* ------------------------ * /
+.error-message
+  text-transform: capitalize
+  color: #e74c3c !important
+  margin-bottom: 20px
+  font-weight: 400 !important
+  i
+    margin-right: 5px
+  /* ------------------------ * /
+  /* NAVBAR
+  /* ------------------------ * /
+.welcome-title
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%)translateY(-50%)
+  h1
+    z-index: 999
+    color: #fff
+.navbar-fixed
+  background-color: #ffffff !important
+  transition: background-color 500ms ease-out
+
+
+.navbar-default
+  background-color: #ffffff
+  border: none
+  height: 74px
+  img
+    width: 200px
+    margin-top: 8px
+
+.navbar-default .navbar-nav
+  li > a
+    color: #808080
+    margin-top: 14px
+    font-size: 70%
+    font-weight: 600
+    &:hover
+      color: #0065aa
+
+.header-btn
+  margin-top: 21px !important
+  padding: 8px 20px !important
+  background-color: #1b95e0 !important
+  color: #ffffff !important
+  border-color: #1b95e0
+  border-radius: 25px
+  transition: background-color 0.3s ease-out
+  &:hover
+    background-color: #0065aa !important
 
 
 /* ------------------------ * /
 /* HERO SECTION
 /* ------------------------ * /
+
 #hero-section
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0, 0.2)), url('../images/hero.jpg')
-  height: 100vh
+  background-image: url('../images/hero-cover.jpg')
+  background-attachment: fixed
+  height: 84vh
   background-size: cover
-  background-position: center
+  background-position: center center
+  text-align: center
+
 
 .hero-text-box
+  position: absolute
+  width: 100%
+  top: 40%
+  left: 35%
+  transform: translate(-50%, -50%)
   h1
-    font-size: 350%
-    font-family: $vibur
+    font-size: 400%
+    font-family: 'Caveat', cursive
     text-shadow: 1px 1px #4d4d4d
     color: #ffffff
   p
     color: #ffffff
     font-weight: 400
-    font-family: $lato-font
-    word-spacing: 2px
-/* ------------------------ * /
-/* NAVBAR
-/* ------------------------ * /
-.top-login-btn
-  padding: 15px 25px !important
-  background-color: #B23000
-  color: #ffffff !important
-  cursor: pointer
-  word-spacing: 3px
-  border-radius: 5px
+    word-spacing: 3px
+    font-size: 120%
+
+.hero-login-btn,
+.hero-signup-btn
+  letter-spacing: 2px
+  border-radius: 50px
+  padding: 17px 45px
+  font-weight: 600
+  font-size: 65%
+  text-transform: uppercase
   transition: all 0.4s ease
   &:hover
+    text-decoration: none
+  &:focus
+    outline: none
+.hero-signup-btn
+  background-color: $main-color
+  border: 2px solid $main-color
+  color: #ffffff
+  &:hover
+    background-color: #0065aa !important
+    border-color: #0065aa
     color: #ffffff
-    background-color: #B23000 !important
+.hero-login-btn
+  color: #ffffff
+  border: 2px solid #ffffff
+  margin-right: 2%
+  &:hover
+    border-color: #ffffff
+    color: $main-color
+    background-color: #ffffff
 
-.navbar-default
-  padding: 10px 0
 /* ------------------------ * /
 /* SIGN UP CONTAINER
 /* ------------------------ * /
+.signup-wrapper
+  p
+    font-size: 130%
+    font-weight: 400
+    color: #fff
+#signup-form
+  padding: 20px
+  button
+    background-color: $main-color
+    color: #fff
+    &:hover
+      background-color: #44afa8
+
+.body-background
+  background: linear-gradient(rgba(0.33, 0, 0, 0.4), rgba(0.33, 0, 0, 0.4)), url('../images/form-background6.jpg')
+  background-position: center
+  background-size: cover
+  height: 100vh
+  z-index: 0
+.alert-icon
+  display: inline-block
+
 .panel-heading
-  background-color: #5CD1C7
-  text-align: center
-  color: #ffffff
-  margin-bottom: 20px
+  text-transform: uppercase
+  background-color: transparent
+  text-align: center !important
+  color: #456480
+  padding-top: 20px
   h3
-    font-weight: 300
+    font-weight: 400
+    word-spacing: 5px
+    letter-spacing: 1px
+  i
+    font-size: 140%
+    display: block
+
 .signup-btn
   display: block
+  border-radius: 50px
   text-decoration: none !important
   text-align: center
-  background: $main-color
-  padding: 6px
-  color: #ffffff
-  font-weight: 400
-  transition: all 0.3s ease
+  background-color: $main-color !important
+  text-transform: uppercase
+  border: 3px solid $main-color
+  padding: 9px 10%
+  color: #ffffff !important
+  font-weight: 600
+  font-size: 60%
+  transition: all 0.4s ease
   cursor: pointer
+  letter-spacing: 1px
+  margin-left: 33%
   &:hover
-    background-color: #54b7af
-    color: #ffffff
+    background-color: #0065aa !important
+    border-color: #0065aa
+    color: #ffffff !important
+  &:focus
+    outline: none
+/* ------------------------ * /
+/* LOGIN FORM
+/* ------------------------ * /
+.panel
+  width: 100%
+  border: 1px solid #ddd
+  -webkit-box-shadow: -2px 13px 40px -7px rgba(0,0,0,0.66)
+  -moz-box-shadow: -2px 13px 40px -7px rgba(0,0,0,0.66)
+  box-shadow: -2px 13px 40px -7px rgba(0,0,0,0.66)
+  border-radius: 10px
+  input
+    background: transparent
+    padding-left: 0
+    border-radius: 0
+    color: #456480
+    border: none
+    box-shadow: none
+    border-bottom: 2px solid #bfcbd5
+    &:focus
+      box-shadow: none
+      outline: none
+  img
+    width: 200px
+  label
+    color: #456480
+    font-weight: 500
+  p
+    display: block
+    text-align: center
+    font-size: 85%
+    a
+      font-weight: 400
+      color: $main-color
+#login-form
+  padding: 20px 25px
+  p
+    color: #456480
+.login-wrapper
+  width: 70%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  h1
+    color: #ddd
+    font-family: 'Pacifico', cursive
+    font-size: 400%
+    font-weight: 600
+    word-spacing: 3px
+    text-rendering: optimizeLegibility
+  h2
+    color: #ffffff !important
+
 .login-btn
   margin-bottom: 20px
 .form-control
   margin-bottom: 30px
   height: 40px
 
-.facebook-btn,
-.google-btn
+
+.facebook-btn, .google-btn
+  border-radius: 25px
   text-align: center
-  display: block
-  widows: 100%
+  display: inline-block
+  width: 48%
   padding: 10px
   transition: all 0.3s ease
   font-size: 85%
@@ -98,10 +278,11 @@ body
     margin-right: 6px
 
 .facebook-btn
+  float: left
   background-color: #3d5b99
   color: #ffffff
-  width: 100%
   margin-bottom: 10px
+  margin-right: 4%
   &:hover
     background-color: #486bb3
   i
@@ -116,4 +297,377 @@ body
   i
     border-right: 1px solid #db634f
     margin-right: 17%
-    padding-right: 8%
+    padding-right: 9%
+
+.spinner
+  display: none
+  width: 80px
+  height: 80px
+  border: 2px solid #f3f3f3
+  border-top: 3px solid $main-color
+  border-radius: 100%
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  animation: spin 1s infinite
+  @keyframes spin
+    from
+      transform: rotate(0deg)
+    to
+      transform: rotate(360deg)
+
+.overlay
+  z-index: 999
+  display: none
+  height: 100%
+  width: 100%
+  background: rgba(0,0,0, 0.9)
+  position: fixed
+  left: 0
+  top: 0
+/* ------------------------ * /
+/* FEATURES SECTION
+/* ------------------------ * /
+#feature-section
+  padding: 40px 0
+  h2
+    color: #4c4c4c
+    font-size: 180%
+    font-weight: 600
+
+  h4
+    font-size: 108%
+    font-weight: 600
+    color: #4c4c4c
+  i
+    font-size: 250%
+  p
+    text-align: left
+
+/* ------------------------ * /
+/* PROFILE
+/* ------------------------ * /
+.family-color, .coworker-color,.friend-color
+  margin-bottom: 10px !important
+  color: #fff
+  border-radius: 100%
+  font-weight: 500
+  width: 200px
+  padding: 20px
+  vertical-align: middle
+  margin: 0 10px  0 25px
+  -webkit-box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.15)
+  -moz-box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.15)
+  box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.15)
+.family-color
+  background-color: #39ca74
+  background-image: -webkit-linear-gradient(top, #39ca74, #62879e)
+  background-image: -moz-linear-gradient(top, #39ca74, #62879e)
+  background-image: -ms-linear-gradient(top, #39ca74, #62879e)
+  background-image: -o-linear-gradient(top, #39ca74, #62879e)
+  background-image: linear-gradient(to bottom, #39ca74, #62879e)
+  -webkit-border-radius: 28
+  -moz-border-radius: 28
+  border-radius: 28px
+  font-family: Arial
+  color: #ffffff
+  font-size: 20px
+  padding: 10px 20px 10px 20px
+  text-decoration: none
+
+
+.friend-color
+  background-color: $main-color
+  background-color: $main-color
+  background-image: -webkit-linear-gradient(top, $main-color, #62879e)
+  background-image: -moz-linear-gradient(top, $main-color, #62879e)
+  background-image: -ms-linear-gradient(top, $main-color, #62879e)
+  background-image: -o-linear-gradient(top, $main-color, #62879e)
+  background-image: linear-gradient(to bottom, $main-color, #62879e)
+  -webkit-border-radius: 28
+  -moz-border-radius: 28
+  border-radius: 28px
+  font-family: Arial
+  color: #ffffff
+  font-size: 20px
+  padding: 10px 20px 10px 20px
+  text-decoration: none
+.coworker-color
+  background-color: #e96a60
+  background-image: -webkit-linear-gradient(top, #e96a60, #62879e)
+  background-image: -moz-linear-gradient(top, #e96a60, #62879e)
+  background-image: -ms-linear-gradient(top, #e96a60, #62879e)
+  background-image: -o-linear-gradient(top, #e96a60, #62879e)
+  background-image: linear-gradient(to bottom, #e96a60, #62879e)
+  -webkit-border-radius: 28
+  -moz-border-radius: 28
+  border-radius: 28px
+  font-family: Arial
+  color: #ffffff
+  font-size: 20px
+  padding: 10px 20px 10px 20px
+  text-decoration: none
+.family-color-text, .coworker-color-text
+  display: inline-block
+.family-color-text
+  color: #2a72af
+.coworker-color-text
+  color: #e54e42
+
+.new-birthday-container
+  // border-radius: 25px
+  list-style: none
+  text-align: center
+  background: #36a4e7
+  transition: all 0.4s ease-in
+  -webkit-box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.33)
+  -moz-box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.33)
+  box-shadow: -1px 6px 28px 0px rgba(0,0,0,0.33)
+  form
+    display: inline-block
+.birthday-col
+  overflow: scroll !important
+.logout-btn
+  margin-top: 12px !important
+  padding: 10px 25px !important
+  background-color: #e54e42
+  border-radius: 25px
+  color: #fff !important
+  font-weight: 400
+  font-size: 70%
+  text-transform: uppercase
+  transition: all 0.4s ease-in
+  &:hover
+    background-color: #bd4036 !important
+
+.birthday-list-title
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 10px
+
+.profile-body
+  width: 100%
+  height: 100vh
+  background-color: #0197d2
+
+.profile-container
+  position: absolute
+  top: 53%
+  left: 50%
+  width: 72%
+  transform: translateY(-50%)translateX(-50%)
+  padding: 20px
+  height: 86vh
+  background-color: #fff
+.navbar-inverse
+  height: 66px
+  margin-bottom: 0
+  background-color: #ffffff
+  border: none
+  border-radius: 0
+  color: #ffffff
+  a
+    margin-top: 7px
+    margin-right: 10px
+
+  img
+    width: 230px
+    margin-top: 16px
+
+.dropdown-btn
+  position: relative
+  list-style: none
+  cursor: pointer
+  i
+    color: #ffffff !important
+    padding: 10px 16px
+    background-color: #9a5cb4
+    border-radius: 100%
+    transition: all 0.3s ease
+    -webkit-box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.10)
+    -moz-box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.10)
+    box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.10)
+    &:hover
+      background: #9a5cb4
+
+.dropdown
+  display: none
+  top: 54px
+  right: 0%
+  z-index: 1
+  position: absolute
+  padding: 12px
+  border-radius: 5px
+  li
+    list-style: none
+  a
+    white-space: nowrap
+    color: #ffffff
+    display: block
+    padding: 13px 45px
+    text-decoration: none
+    background-color: #9a5cb4
+    margin-top: 0 !important
+    transition: all 0.3s ease
+    &:hover
+      text-decoration: none
+      color: #fff
+      background-color: $main-color
+
+.current-user
+  text-transform: capitalize
+
+  h1
+    text-align: center
+    font-size: 200%
+    color: #4c4c4c
+
+.arrow-up
+  font-size: 120%
+  position: absolute
+  z-index: -1 !important
+  top: 2px
+  left: 76%
+  width: 0
+  height: 0
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-bottom: 20px solid #9a5cb4
+
+/* ------------------------ * /
+/* ADD NEW BIRTHDAY FORM
+/* ------------------------ * /
+.new-birthday-from-container
+  height: 100%
+  width: 100%
+  background-color: red
+  background-position: center center
+  background-size: cover
+
+.birthday-title
+  margin-bottom: 0 !important
+  text-align: right !important
+  font-size: 160% !important
+
+.profile-btn
+  color: #fff
+  margin-left: 36%
+
+
+.day-input,
+.year-input
+  color: #fff !important
+  font-weight: 600
+  text-align: center
+  position: relative
+  top: -5px
+  width: 33.3333333%
+  display: inline-block
+  padding: 10px
+  border: none !important
+  &::-webkit-input-placeholder
+    color: #fff !important
+    font-weight: 600 !important
+    text-align: center
+
+
+
+.year-input
+  background-color: #39ca74 !important
+  color: #fff !important
+
+.month-input
+  width: 33.3333333%
+  float: left
+  border: none !important
+  background-color: #e54e42 !important
+
+.day-input
+  float: left
+  background-color: #f0c231 !important
+
+
+
+select
+  color: #fff
+  font-weight: 600
+  background-position: right center
+  background-repeat: no-repeat
+  background-origin: content-box
+  background-image: url("data:image/svg+xmlbase64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMiIKICAgdmlld0JveD0iMCAwIDM1Ljk3MDk4MyAyMy4wOTE1MTgiCiAgIGhlaWdodD0iNi41MTY5Mzk2bW0iCiAgIHdpZHRoPSIxMC4xNTE4MTFtbSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAyLjAxNDUxLC00MDcuMTIyMjUpIgogICAgIGlkPSJsYXllcjEiPgogICAgPHRleHQKICAgICAgIGlkPSJ0ZXh0MzMzNiIKICAgICAgIHk9IjYyOS41MDUwNyIKICAgICAgIHg9IjI5MS40Mjg1NiIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjQwcHg7bGluZS1oZWlnaHQ6MTI1JTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIj48dHNwYW4KICAgICAgICAgeT0iNjI5LjUwNTA3IgogICAgICAgICB4PSIyOTEuNDI4NTYiCiAgICAgICAgIGlkPSJ0c3BhbjMzMzgiPjwvdHNwYW4+PC90ZXh0PgogICAgPGcKICAgICAgIGlkPSJ0ZXh0MzM0MCIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZTo0MHB4O2xpbmUtaGVpZ2h0OjEyNSU7Zm9udC1mYW1pbHk6Rm9udEF3ZXNvbWU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpGb250QXdlc29tZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzMzQ1IgogICAgICAgICBzdHlsZT0iZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxIgogICAgICAgICBkPSJtIDIzNy41NjY5Niw0MTMuMjU1MDcgYyAwLjU1ODA0LC0wLjU1ODA0IDAuNTU4MDQsLTEuNDczMjIgMCwtMi4wMzEyNSBsIC0zLjcwNTM1LC0zLjY4MzA0IGMgLTAuNTU4MDQsLTAuNTU4MDQgLTEuNDUwOSwtMC41NTgwNCAtMi4wMDg5MywwIEwgMjIwLDQxOS4zOTM0NiAyMDguMTQ3MzIsNDA3LjU0MDc4IGMgLTAuNTU4MDMsLTAuNTU4MDQgLTEuNDUwODksLTAuNTU4MDQgLTIuMDA4OTMsMCBsIC0zLjcwNTM1LDMuNjgzMDQgYyAtMC41NTgwNCwwLjU1ODAzIC0wLjU1ODA0LDEuNDczMjEgMCwyLjAzMTI1IGwgMTYuNTYyNSwxNi41NDAxNyBjIDAuNTU4MDMsMC41NTgwNCAxLjQ1MDg5LDAuNTU4MDQgMi4wMDg5MiwwIGwgMTYuNTYyNSwtMTYuNTQwMTcgeiIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=")
+  background-size: 1ex
+  background-color: #fff !important
+  text-align: center
+  -webkit-appearance: none
+  appearance: none
+  padding: 10px
+  margin: 0 auto
+  border-radius: 0px
+  margin-bottom: 20px
+  &:focus
+    outline: none
+
+.checkbox
+  text-align: center
+  label
+    margin-right: 15px
+
+.form-container
+  position: absolute
+  top: 40%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  width: 40%
+
+/* ------------------------ * /
+/* BIRTHDAY LIST
+/* ------------------------ * /
+.newName
+  display: block
+  font-size: 80%
+  text-transform: capitalize
+  padding: 13px 0
+  color: #fff
+
+.newAge
+  margin-top: -20px
+  padding: 13px 0
+  display: block
+  font-size: 80%
+  color: #fff
+
+.edit-btn
+  text-decoration: none
+  margin-right: 2%
+  margin-left: 85%
+  i
+    font-size: 120%
+    color: #fff
+.delete-btn
+  position: relative
+  border: none
+  background: transparent
+  font-size: 120%
+  i
+    font-size: 120%
+    color: #fff
+    transition: all 0.3s ease
+    &:hover
+      color: #e54e42
+.current-user
+  color: #4c4c4c
+.profile-picture
+  width: 200px
+  height: 200px
+  border-bottom: 10px solid #1b95e0
+  border-top: 10px solid #e54e42
+  border-right: 10px solid #f0c231
+  border-left: 10px solid #39ca74
+  -webkit-box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.10)
+  -moz-box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.10)
+  box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.10)
+.family-background
+  background-color: red

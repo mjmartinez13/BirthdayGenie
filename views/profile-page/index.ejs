@@ -1,0 +1,127 @@
+
+<div class="profile-body">
+
+<nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <img  class="logo" src="/images/logo.png">
+          </div>
+          <div id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown-btn"><a><i class="ion-plus-round"></i></a>
+                    <ul class="dropdown">
+                      <div class="arrow-up"></div>
+                      <li><a href="/profile/new">Add new birthday</a></li>
+                      <li><a href="">My Templates</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="logout-btn" href="/logout">Log Out</a></li>
+            </ul>
+
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+    <div class="container">
+
+
+      <div class="profile-container">
+
+
+        <div class="row">
+          <div class="col-sm-6 birthday-col">
+            <h2 style="color: #4c4c4c;"class="birthday-list-title">Birthday <b>List</b></h2>
+            <hr style="border: 3px solid #e54e42; border-radius: 25px;width: 10%; display: inline-block; margin-left: 26% ">
+            <hr style="border: 3px solid #f0c231; border-radius: 25px;width: 10%; display: inline-block">
+            <hr style="border: 3px solid #1b95e0; border-radius: 25px;width: 10%; display: inline-block">
+            <hr style="border: 3px solid #39ca74; border-radius: 25px;width: 10%; display: inline-block">
+
+          <% if (typeof updateBirthday !== "undefined") { %>
+              <p class="update-birthday"> <%= updateBirthday %> </p>
+              <% } %>
+
+                <ul>
+
+                  <% birthday.forEach((birthday) => { %>
+
+                    <% if (typeof birthday.family !== "undefined") { %>
+
+                      <li class="new-birthday-container family">
+
+                      <h2><span class="newName"><%= birthday.firstName %> <%= birthday.lastName %></span></h2>
+
+                      <h2><span class="newAge"> D.O.B <%= birthday.month %> / <%= birthday.day %> / <%= birthday.year %></span></h2>
+
+                      <a class="edit-btn"href="/profile/<%= birthday._id %>/edit"><i class="ion-edit"></i></a>
+
+                      <form action="/profile/<%= birthday._id %>/delete" method="post">
+                      <button class="delete-btn" type="submit"><i class="ion-trash-b"></i></button>
+                      </form>
+                      </li>
+
+                      <% } else if (typeof birthday.coworker !== "undefined") { %>
+
+                        <li class="new-birthday-container coworker">
+
+                        <h2><span class="newName"><%= birthday.firstName %> <%= birthday.lastName %></span> </h2>
+
+                        <h2><span class="newAge"> D.O.B <%= birthday.month %> / <%= birthday.day %> / <%= birthday.year %></span></h2>
+
+                        <a class="edit-btn"href="/profile/<%= birthday._id %>/edit"><i class="ion-edit"></i></a>
+
+                        <form action="/profile/<%= birthday._id %>/delete" method="post">
+                        <button class="delete-btn" type="submit"><i class="ion-trash-b"></i></button>
+                        </form>
+
+                        </li>
+                        <%  } else if (typeof birthday.friend !== "undefined") { %>
+
+                          <li class="new-birthday-container friend">
+
+                          <h2><span class="newName"><%= birthday.firstName %> <%= birthday.lastName %></span> </h2>
+
+                          <h2><span class="newAge"> D.O.B <%= birthday.month %> / <%= birthday.day %> / <%= birthday.year %></span></h2>
+
+                          <a class="edit-btn"href="/profile/<%= birthday._id %>/edit"><i class="ion-edit"></i></a>
+
+                          <form action="/profile/<%= birthday._id %>/delete" method="post">
+                          <button class="delete-btn" type="submit"><i class="ion-trash-b"></i></button>
+                          </form>
+
+                          </li>
+                          <%  } %> %>
+
+                  <% }) %>
+                </ul>
+
+
+          </div>
+
+          <div class="col-sm-6" style="text-align: center">
+
+
+              <img  class="profile-picture img-circle" src="/images/marlon.jpg" class="responsive-img" alt="">
+
+            <h2 class="current-user"><b><%= userInfo.firstName %> <%= userInfo.lastName %></b> </h2>
+            <hr>
+            <div class="family-color">
+              Family
+            </div>
+
+
+            <div class="friend-color">
+              Friends
+            </div>
+
+
+            <div class="coworker-color">
+              Coworker
+            </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+</div>
