@@ -2,15 +2,15 @@
 
 $(document).ready(() => {
 
-  // $(".spinner").show();
-  // $(".overlay").show();
-  //
-  //   setTimeout(function() {
-  //     $(".spinner").hide();
-  //     $(".navbar-default").addClass('navbar-fixed-top');
-  //  }, 4000);
-  //
-  //   setTimeout(function() { $(".overlay").hide(); }, 4000);
+  $(".spinner").show();
+  $(".overlay").show();
+
+    setTimeout(function() {
+      $(".spinner").hide();
+      $(".navbar-default").addClass('navbar-fixed-top');
+   }, 4000);
+
+    setTimeout(function() { $(".overlay").hide(); }, 4000);
 
 
 
