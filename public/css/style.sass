@@ -630,6 +630,8 @@ textarea.form-control
   border: none
   border-radius: 0
   color: #ffffff
+  @media screen and (max-width: 740px)
+    position: absolute
   a
     margin-top: 7px
     margin-right: 10px
@@ -645,7 +647,9 @@ textarea.form-control
   @media screen and (max-width: 740px)
     z-index: 1
     float: right
-    top: -48px
+    top: 2%
+    left: 64%
+    transform: translateX(-50%)translateY(-50%)
   i
     color: #ffffff !important
     padding: 10px 16px
