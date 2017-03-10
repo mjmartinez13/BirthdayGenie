@@ -21,15 +21,21 @@
 
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
-      </nav>
+</nav>
 
     <div class="container">
 
-
       <div class="profile-container">
 
+      <div class="profile-img-mobile" style="text-align: center;">
 
+        <img  class="profile-picture img-circle" src="/images/marlon.jpg" class="responsive-img" alt="">
+
+        <h2 class="current-user"><b><%= userInfo.firstName %> <%= userInfo.lastName %></b> </h2>
+        <hr>
+      </div>
         <div class="row">
+
           <div class="col-sm-6 birthday-col">
             <h2 style="color: #4c4c4c;"class="birthday-list-title">Birthday <b>List</b></h2>
             <hr style="border: 3px solid #e54e42; border-radius: 25px;width: 10%; display: inline-block; margin-left: 26% ">
@@ -100,11 +106,13 @@
 
           <div class="col-sm-6" style="text-align: center">
 
+          <div class="profile-img-desktop">
 
-              <img  class="profile-picture img-circle" src="/images/marlon.jpg" class="responsive-img" alt="">
+            <img  class="profile-picture img-circle" src="/images/marlon.jpg" class="responsive-img" alt="">
 
             <h2 class="current-user"><b><%= userInfo.firstName %> <%= userInfo.lastName %></b> </h2>
             <hr>
+          </div>
             <div class="family-color">
               Family
             </div>
@@ -120,7 +128,10 @@
             </div>
 
         </div>
+      <div class="mobile-footer">
 
+        <li><a class="logout-btn-mobile" href="/logout">Log Out</a></li>
+      </div>
 
       </div>
 

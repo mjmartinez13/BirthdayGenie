@@ -2,15 +2,23 @@
 
 $(document).ready(() => {
 
-  $(".spinner").show();
-  $(".overlay").show();
+  // $(".spinner").show();
+  // $(".overlay").show();
+  //
+  //   setTimeout(function() {
+  //     $(".spinner").hide();
+  //     $(".navbar-default").addClass('navbar-fixed-top');
+  //  }, 4000);
+  //
+  //   setTimeout(function() { $(".overlay").hide(); }, 4000);
 
-    setTimeout(function() {
-      $(".spinner").hide();
-      $(".navbar-default").addClass('navbar-fixed-top');
-   }, 4000);
+$('.navbar-toggle.collapsed').click( () => {
+  $('.hero-h1').css('visibility', 'hidden');
+}, () => {
+    $('.hero-h1').css('visibility', 'visible');
+});
 
-    setTimeout(function() { $(".overlay").hide(); }, 4000);
+
 
 $(".features").on("click", function( e ) {
    e.preventDefault();
