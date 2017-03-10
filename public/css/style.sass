@@ -204,9 +204,12 @@ li
   background: -webkit-linear-gradient(to left, #3a6186 , $main-color)
   background: linear-gradient(to left, #3a6186 , $main-color)
   color : #fff
-
+  @media screen and (max-width: 740px)
+    padding: 10px
 .contact-section
   padding-top: 40px
+  @media screen and (max-width: 740px)
+    padding: 0
 
 .contact-section .col-md-6
   width: 50%
@@ -268,10 +271,9 @@ textarea.form-control
   min-height: 100vh
   z-index: 0
   @media screen and (max-width: 740px)
-    min-height: 100vh !important
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
+    background: #3a6186 /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3a6186 , $main-color)
+    background: linear-gradient(to left, #3a6186 , $main-color)
 .alert-icon
   display: inline-block
 
@@ -364,8 +366,12 @@ textarea.form-control
     font-weight: 600
     word-spacing: 3px
     text-rendering: optimizeLegibility
+    @media screen and (max-width: 740px)
+      font-size: 200%
   h2
     color: #ffffff !important
+    @media screen and (max-width: 740px)
+      font-size: 85%
 
 .login-btn
   margin-bottom: 20px
@@ -445,10 +451,14 @@ textarea.form-control
 /* ------------------------ * /
 #feature-section
   padding: 100px 0
+  @media screen and (max-width: 740px)
+    padding: 10px
   h2
     color: #4c4c4c
     font-size: 180%
     font-weight: 600
+    @media screen and (max-width: 740px)
+      font-size: 150%
 
   h4
     font-size: 108%
