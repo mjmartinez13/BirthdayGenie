@@ -8,8 +8,6 @@ const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const session      = require('express-session');
 const LocalStrategy = require('passport-local').Strategy;
-const FbStrategy   = require('passport-facebook').Strategy;
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const passport     = require('passport');
 const bcrypt        = require('bcrypt');
 const flash        = require('connect-flash');
@@ -70,52 +68,52 @@ passport.deserializeUser((userId, cb) => {
   });
 });
 
-passport.use(new FbStrategy(
-  {
-    clientID: process.env.FB_CLIENT_ID,
-    clientSecret: process.env.FB_CLIENT_SECRET,
-    callbackURL: process.env.HOST_ADDRESS + '/auth/facebook/callback'
-  },
-  saveSocialUser // <──◉ social login callback
-));
-
-passport.use(new GoogleStrategy(
-  {
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.HOST_ADDRESS + '/auth/google/callback'
-  },
-  saveSocialUser // <──◉ social login callback
-));
-
-
-function saveSocialUser (accessToken, refreshToken, profile, done) {
-  // See if there's a user from the provider with the given id.
-  User.findOne(
-    { provider: profile.provider, providerId: profile.id },
-    (err, userDocument) => {
-      // If there's an error or a user was retrieved, notify Passport by calling "done()".
-      if (err || userDocument) {
-        done(err, userDocument);
-        return;
-      }
-
-      // Otherwise attempt to save a new user (no username or password).
-      const names = profile.displayName.split(' ');
-      const theUser = new User({
-        firstName: names[0],
-        lastName: names.slice(1).join(' '),
-        provider: profile.provider,
-        providerId: profile.id
-      });
-
-      theUser.save((err, userDocument) => {
-        // Notify Passport about the result by calling "done()".
-        done(err, userDocument);
-      });
-    }
-  );
-}
+// passport.use(new FbStrategy(
+//   {
+//     clientID: process.env.FB_CLIENT_ID,
+//     clientSecret: process.env.FB_CLIENT_SECRET,
+//     callbackURL: process.env.HOST_ADDRESS + '/auth/facebook/callback'
+//   },
+//   saveSocialUser // <──◉ social login callback
+// ));
+//
+// passport.use(new GoogleStrategy(
+//   {
+//     clientID: process.env.GOOGLE_CLIENT_ID,
+//     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+//     callbackURL: process.env.HOST_ADDRESS + '/auth/google/callback'
+//   },
+//   saveSocialUser // <──◉ social login callback
+// ));
+//
+//
+// function saveSocialUser (accessToken, refreshToken, profile, done) {
+//   // See if there's a user from the provider with the given id.
+//   User.findOne(
+//     { provider: profile.provider, providerId: profile.id },
+//     (err, userDocument) => {
+//       // If there's an error or a user was retrieved, notify Passport by calling "done()".
+//       if (err || userDocument) {
+//         done(err, userDocument);
+//         return;
+//       }
+//
+//       // Otherwise attempt to save a new user (no username or password).
+//       const names = profile.displayName.split(' ');
+//       const theUser = new User({
+//         firstName: names[0],
+//         lastName: names.slice(1).join(' '),
+//         provider: profile.provider,
+//         providerId: profile.id
+//       });
+//
+//       theUser.save((err, userDocument) => {
+//         // Notify Passport about the result by calling "done()".
+//         done(err, userDocument);
+//       });
+//     }
+//   );
+// }
 
 app.use((req, res, next) => {
   if (req.isAuthenticated()) {

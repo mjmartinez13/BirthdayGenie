@@ -3,7 +3,7 @@
 </div>
 <section id="hero-section">
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,6 +18,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a class="link-header home" href="">Home</a></li>
               <li><a class="link-header features" href="">Features</a></li>
+              <li><a class="link-header contact" href="">Contact Us</a></li>
               <li><a href="/login" class="header-btn" role="button">Log In <span class="glyphicon glyphicon-chevron-right"></span></a></li>
 
 
@@ -68,3 +69,39 @@
     </div>
   </div>
 </section>
+
+<section id="contact">
+			<div class="section-content">
+				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+				<h3>Let us know about your experience and what we can do to improve it</h3>
+        <p class="contact-error"><i class="ion-alert-circled" style="margin-right: 10px"></i>Pealse fill out the form  </p>
+        <h2 class="success-contact-form"><i class="ion-checkmark-circled" style="margin-right: 10px"></i>Your feedback has been sent successfully! </h2>
+			</div>
+			<div class="contact-section">
+			<div class="container">
+				<form class="contact-form">
+					<div class="col-md-6 form-line">
+			  			<div class="form-group">
+			  				<label for="name-input">Your name</label>
+					    	<input type="text" class="form-control" id="name-input" placeholder=" Enter Name">
+				  		</div>
+				  		<div class="form-group">
+					    	<label for="email-input">Email Address</label>
+					    	<input type="email" class="form-control" id="email-input" placeholder=" Enter Email id">
+					  	</div>
+
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="form-group">
+			  				<label for ="description"> Message</label>
+			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+			  			</div>
+			  			<div>
+
+			  				<button type="button" class="btn btn-default submit" href="/login"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message </button>
+			  			</div>
+
+					</div>
+				</form>
+			</div>
+		</section>

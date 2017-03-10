@@ -24,6 +24,12 @@ $(".features").on("click", function( e ) {
       scrollTop: $('#hero-section').offset().top
     }, 700);
   });
+  $(".contact").on("click", function( e ) {
+     e.preventDefault();
+     $("body, html").animate({
+       scrollTop: $('#contact').offset().top
+     }, 700);
+   });
 
 $('.dropdown-btn').hover(() => {
     $('.dropdown').fadeIn(300);
@@ -71,5 +77,22 @@ $('.dropdown-btn').hover(() => {
     'padding': '10px',
     'text-decoration': 'none'
   });
+
+  $('.btn-default.submit').click( () => {
+    let nameInput = $('#name-input').val();
+    let descriptionInput = $('#description').val();
+    if ( nameInput === 'undefined' || nameInput === '' || descriptionInput === 'undefined' || descriptionInput === '') {
+      $('.contact-error').css('visibility', 'visible');
+      $('#name-input').css('border', '2px solid #e54e42');
+      $('#email-input').css('border', '2px solid #e54e42');
+      $('#description').css('border', '2px solid #e54e42');
+    }
+    else {
+      $('.contact-error').css('visibility', 'hidden');
+      $('.contact-form').fadeOut(100);
+      $('.success-contact-form').show(500);
+    }
+  });
+
 
 });
