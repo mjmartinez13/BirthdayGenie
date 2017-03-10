@@ -2,15 +2,15 @@
 
 $(document).ready(() => {
 
-  $(".spinner").show();
-  $(".overlay").show();
-
-    setTimeout(function() {
-      $(".spinner").hide();
-      $(".navbar-default").addClass('navbar-fixed-top');
-   }, 4000);
-
-    setTimeout(function() { $(".overlay").hide(); }, 4000);
+  // $(".spinner").show();
+  // $(".overlay").show();
+  //
+  //   setTimeout(function() {
+  //     $(".spinner").hide();
+  //     $(".navbar-default").addClass('navbar-fixed-top');
+  //  }, 4000);
+  //
+  //   setTimeout(function() { $(".overlay").hide(); }, 4000);
 
 
 
@@ -34,13 +34,13 @@ $(".features").on("click", function( e ) {
      }, 700);
    });
 
-// $('.dropdown-btn').hover(() => {
-//     $('.dropdown').fadeIn(300);
-//     $('.parent i').css('background-color', '#9a5cb4');
-//   }, () => {
-//     $('ul.dropdown').fadeOut(200);
-//     $('.dropdown-btn i').css('background-color', '#1b95e0');
-//   });
+$('.dropdown-btn').hover(() => {
+    $('.dropdown').fadeIn(300);
+    $('.parent i').css('background-color', '#9a5cb4');
+  }, () => {
+    $('ul.dropdown').fadeOut(200);
+    $('.dropdown-btn i').css('background-color', '#1b95e0');
+  });
 
 $('.dropdown-btn').click( () => {
   $('.dropdown').toggle();
